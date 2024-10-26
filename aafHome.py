@@ -2,9 +2,11 @@ import streamlit as st
 import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
+import os
 
 def main():
-    with open('~/ServiceConfigs/c.yaml') as file:
+    yaml_path = os.path.expanduser('~/ServiceConfigs/c.yaml') 
+    with open(yaml_path) as file:
         config = yaml.load(file, Loader=SafeLoader)
 
     authenticator = stauth.Authenticate(
