@@ -6,7 +6,7 @@ import os
 
 
 def sidebar(authenticator):
-    with st.sidebar():
+    with st.sidebar:
         authenticator.logout()
 
 def main():
