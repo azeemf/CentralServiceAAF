@@ -4,9 +4,8 @@ import yaml
 from yaml.loader import SafeLoader
 import os
 
-authenticator = None
 
-def sidebar():
+def sidebar(authenticator):
 
     authenticator.logout()
 
@@ -22,7 +21,7 @@ def main():
     config['cookie']['expiry_days']
     )
 
-    sidebar()
+    sidebar(authenticator)
 
     st.write("Logged in")
 
