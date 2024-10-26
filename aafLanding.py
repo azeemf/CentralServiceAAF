@@ -4,6 +4,12 @@ import yaml
 from yaml.loader import SafeLoader
 import os
 
+authenticator = None
+
+def sidebar():
+
+    authenticator.logout()
+
 def main():
     yaml_path = os.path.expanduser('~/ServiceConfigs/c.yaml') 
     with open(yaml_path) as file:
@@ -16,8 +22,15 @@ def main():
     config['cookie']['expiry_days']
     )
 
-    authenticator.logout()
+    sidebar()
 
     st.write("Logged in")
+
+st.set_page_config(
+    page_title="Home - MBA-AAF Services",
+    page_icon="✈️",
+    layout="centered",
+    initial_sidebar_state="auto",
+)
 
 main()
