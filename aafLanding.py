@@ -26,11 +26,4 @@ def main():
 
     st.write("Logged in")
 
-st.set_page_config(
-    page_title="Home - MBA-AAF Services",
-    page_icon="✈️",
-    layout="centered",
-    initial_sidebar_state="auto",
-)
-
 main()

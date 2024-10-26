@@ -30,13 +30,4 @@ def main():
     elif st.session_state['authentication_status'] is None:
         st.warning('Please enter your username and password')
 
-
-st.set_page_config(
-    page_title="MBA-AAF Services",
-    page_icon="✈️",
-    layout="centered",
-    initial_sidebar_state="auto",
-)
-
-
 main()
