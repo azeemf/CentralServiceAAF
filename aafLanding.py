@@ -6,8 +6,8 @@ import os
 
 
 def sidebar(authenticator):
-
-    authenticator.logout()
+    with st.sidebar():
+        authenticator.logout()
 
 def main():
     yaml_path = os.path.expanduser('~/ServiceConfigs/c.yaml') 
