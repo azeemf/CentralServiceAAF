@@ -30,6 +30,6 @@ def main():
     elif st.session_state['authentication_status'] is None:
         st.warning('Please enter your username and password')
 
-    st.image("MBA Creations Logo.png")
+    st.image("MBA Creations Logo.png", width=100)
 
 main()
