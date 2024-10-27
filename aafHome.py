@@ -36,7 +36,7 @@ def main():
         st.write(" ")
     
     with icol2:
-        st.image("MBA Creations Logo.png", width=500)
+        st.image("MBA Creations Logo.png", width=250)
 
     with icol3:
         st.write(" ")
