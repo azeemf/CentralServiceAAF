@@ -30,6 +30,15 @@ def main():
     elif st.session_state['authentication_status'] is None:
         st.warning('Please enter your username and password')
 
-    st.image("MBA Creations Logo.png", width=100)
+    icol1, icol2, icol3 = st.columns(3)
+
+    with icol1:
+        st.write(" ")
+    
+    with icol2:
+        st.image("MBA Creations Logo.png", width=500)
+
+    with icol3:
+        st.write(" ")
 
 main()
