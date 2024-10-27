@@ -7,7 +7,7 @@ if 'authentication_status' not in st.session_state:
 st.set_page_config(
     page_title="MBA-AAF Services",
     page_icon="✈️",
-    layout="centered",
+    layout="wide",
     initial_sidebar_state="auto",
 )
 
