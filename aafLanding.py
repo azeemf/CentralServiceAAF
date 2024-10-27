@@ -3,11 +3,20 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 import os
+from datetime import date
 
 
 def sidebar(authenticator):
     with st.sidebar:
         authenticator.logout()
+
+def topBar():
+    tbcol1, tbcol2 = st.columns(2)
+
+    with tbcol1:
+        today = date.today()
+        text_today = today.strftime("%B %d, %Y")
+        st.markdown(f"## {text_today}")
 
 def main():
     yaml_path = os.path.expanduser('~/ServiceConfigs/c.yaml') 
@@ -22,7 +31,6 @@ def main():
     )
 
     sidebar(authenticator)
-
-    st.write("Logged in")
+    topBar()
 
 main()
