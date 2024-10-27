@@ -20,4 +20,10 @@ if st.session_state['authentication_status'] is None:
 
 if st.session_state['authentication_status']:
     pg = st.navigation([landing_page])
+    st.set_page_config(
+        page_title="MBA-AAF Services",
+        page_icon="✈️",
+        layout="wide",
+        initial_sidebar_state="auto",
+    )
     pg.run()
