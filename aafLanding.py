@@ -33,4 +33,11 @@ def main():
     sidebar(authenticator)
     topBar()
 
+st.set_page_config(
+    page_title="MBA-AAF Services",
+    page_icon="✈️",
+    layout="wide",
+    initial_sidebar_state="auto",
+)
+
 main()
