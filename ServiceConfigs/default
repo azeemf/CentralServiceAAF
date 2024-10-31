@@ -54,7 +54,7 @@ server {
     ssl_prefer_server_ciphers on;
 
     location / {
-        root /home/ubuntu/CentralServiceAAF/3JSExp;
+        alias /home/ubuntu/CentralServiceAAF/3JSExp/;
         index main.html;
     }
 }
