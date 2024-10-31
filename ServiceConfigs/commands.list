@@ -1,1 +1,2 @@
 scp -i "C:\Users\music\.ssh\xps.pem" ubuntu@52.27.54.161:~/ServiceConfigs/default ./ 
+ssh -i node.pem ubuntu@52.27.54.161
