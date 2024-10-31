@@ -17,6 +17,7 @@ let isMovingBackward = false;
 let isMovingLeft = false;
 let isMovingRight = false;
 let isRotating = false;
+let mouseDown = false;
 
 const moveSpeed = 0.1;
 const rotateSpeed = 0.01;
@@ -35,9 +36,6 @@ document.addEventListener('keydown', (event) => {
         case 'd':
             isMovingRight = true;
             break;
-        case 'r':
-            isRotating = true;
-            break;
     }
 });
 
@@ -55,10 +53,12 @@ document.addEventListener('keyup', (event) => {
         case 'd':
             isMovingRight = false;
             break;
-        case 'r':
-            isRotating = false;
-            break;
     }
+});
+
+// To capture canvas click and toggle rotation mode
+renderer.domElement.addEventListener('click', () => {
+    isRotating = !isRotating;
 });
 
 document.addEventListener('mousemove', (event) => {
