@@ -17,10 +17,9 @@ let isMovingBackward = false;
 let isMovingLeft = false;
 let isMovingRight = false;
 let isRotating = false;
-let mouseDown = false;
-
-const moveSpeed = 0.1;
-const rotateSpeed = 0.01;
+let mouseSensitivity = 0.002;
+let moveSpeed = 0.1;
+let velocity = new THREE.Vector3();
 
 document.addEventListener('keydown', (event) => {
     switch (event.key) {
@@ -56,25 +55,27 @@ document.addEventListener('keyup', (event) => {
     }
 });
 
-// To capture canvas click and toggle rotation mode
 renderer.domElement.addEventListener('click', () => {
     isRotating = !isRotating;
 });
 
 document.addEventListener('mousemove', (event) => {
     if (isRotating) {
-        camera.rotation.y -= event.movementX * rotateSpeed;
-        camera.rotation.x -= event.movementY * rotateSpeed;
+        camera.rotation.y -= event.movementX * mouseSensitivity;
+        camera.rotation.x -= event.movementY * mouseSensitivity;
     }
 });
 
 function animate() {
     requestAnimationFrame(animate);
 
-    if (isMovingForward) camera.position.z -= moveSpeed;
-    if (isMovingBackward) camera.position.z += moveSpeed;
-    if (isMovingLeft) camera.position.x -= moveSpeed;
-    if (isMovingRight) camera.position.x += moveSpeed;
+    if (isMovingForward) velocity.z = -moveSpeed;
+    if (isMovingBackward) velocity.z = moveSpeed;
+    if (isMovingLeft) velocity.x = -moveSpeed;
+    if (isMovingRight) velocity.x = moveSpeed;
+
+    camera.position.add(velocity);
+    velocity.set(0, 0, 0);  // Reset velocity after applying movement
 
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
