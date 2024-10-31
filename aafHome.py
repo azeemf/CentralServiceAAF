@@ -30,8 +30,7 @@ def main():
     elif st.session_state['authentication_status'] is None:
         st.warning('Please enter your username and password')
 
-    link = '[my link](exp.aaf-services.com)'
-    st.markdown(link, unsafe_allow_html=True)
+    st.link_button("Experiance", url="https://exp.aaf-services.uk", use_container_width=True)
 
     icol1, icol2, icol3 = st.columns(3)
 
