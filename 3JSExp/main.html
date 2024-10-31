@@ -12,6 +12,16 @@
             color: white;
             font-family: Arial, sans-serif;
         }
+        #sidebar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100%;
+            background-color: #2a2d37; /* Darker shade for the sidebar */
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        }
         #title {
             text-align: center;
             font-size: 2em;
@@ -19,10 +29,15 @@
         }
         canvas {
             display: block;
+            margin-left: 100px; /* Adjust canvas position to account for sidebar */
         }
     </style>
 </head>
 <body>
+    <div id="sidebar">
+        <!-- Sidebar content here -->
+        <p>Sidebar Content</p>
+    </div>
     <div id="title">3D Spinning Cube</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
