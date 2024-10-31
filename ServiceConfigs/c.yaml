@@ -11,7 +11,7 @@ credentials:
       last_name: Fidahusein
       logged_in: False # Will be managed automatically
       password: $2b$12$9mAxBXQGrtfMb7I8fRonHersHBtXrTlK1tQ4vfor0MqhfMF.3WLDi
-    aaf:
+    ccf:
       email: ---
       failed_login_attempts: 0 # Will be managed automatically
       first_name: Cameron
