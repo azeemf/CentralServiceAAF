@@ -8,67 +8,37 @@
         body {
             margin: 0;
             overflow: hidden;
-            background-color: #f0f2f5; /* Light background for Streamlit style */
-            color: #333; /* Darker text color */
-            font-family: 'Arial', sans-serif;
-        }
-        #header {
-            background-color: #2a2d37; /* Header background */
-            padding: 15px;
-            text-align: center;
+            background-color: #0e1117; /* Streamlit Dark Theme Color */
             color: white;
-            font-size: 1.5em;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
         }
         #sidebar {
             position: absolute;
-            top: 60px; /* Below the header */
+            top: 0;
             left: 0;
-            width: 150px; /* Wider sidebar */
-            height: calc(100% - 60px); /* Full height minus header */
-            background-color: #fff; /* White sidebar for contrast */
-            padding: 15px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-            overflow-y: auto; /* Enable scrolling if content overflows */
+            width: 100px;
+            height: 100%;
+            background-color: #2a2d37; /* Darker shade for the sidebar */
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
         }
         #title {
+            text-align: center;
+            font-size: 2em;
             margin: 20px 0;
         }
         canvas {
             display: block;
-            margin-left: 150px; /* Adjust canvas position for sidebar width */
-            margin-top: 60px; /* Adjust for header height */
-            border: 1px solid #ccc; /* Add a light border */
-        }
-        button {
-            background-color: #4CAF50; /* Green button */
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
-            margin: 10px 0;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #45a049; /* Darker green on hover */
-        }
-        p {
-            margin: 0; /* Remove default paragraph margin */
-            line-height: 1.5; /* Improve readability */
+            margin-left: 100px; /* Adjust canvas position to account for sidebar */
         }
     </style>
 </head>
 <body>
-    <div id="header">3D Spinning Cube</div>
     <div id="sidebar">
+        <!-- Sidebar content here -->
         <p>Sidebar Content</p>
-        <button>Action 1</button>
-        <button>Action 2</button>
-        <button>Action 3</button>
     </div>
-    <canvas id="canvas"></canvas>
+    <div id="title">3D Spinning Cube</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
