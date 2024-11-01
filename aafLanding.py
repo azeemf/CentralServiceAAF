@@ -10,10 +10,13 @@ def sidebar(authenticator):
     with st.sidebar:
         authenticator.logout()
 
-def topBar():
+def topBar(authenticator):
     tbcol1, tbcol2 = st.columns(2)
 
     with tbcol1:
+        print("Welcome " + st.session_state["name"])
+
+    with tbcol2:
         today = date.today()
         text_today = today.strftime("%B %d, %Y")
         st.markdown(f"## {text_today}")
@@ -31,6 +34,6 @@ def main():
     )
 
     sidebar(authenticator)
-    topBar()
+    topBar(authenticator)
 
 main()
