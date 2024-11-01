@@ -14,12 +14,12 @@ def topBar(authenticator):
     tbcol1, tbcol2 = st.columns(2)
 
     with tbcol1:
-        st.write("Welcome " + st.session_state["name"])
+        st.subheader("Welcome " + st.session_state["name"])
 
     with tbcol2:
         today = date.today()
         text_today = today.strftime("%B %d, %Y")
-        st.write(f"{text_today}")
+        st.subheader(f"{text_today}")
 
 def main():
     yaml_path = os.path.expanduser('~/ServiceConfigs/c.yaml') 
