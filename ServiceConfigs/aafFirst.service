@@ -1,0 +1,12 @@
+[Unit]
+Description=Run aafFirst at startup
+After=network.target
+
+[Service]
+User=ubuntu  # Ensure this matches your user
+WorkingDirectory=/home/ubuntu/CentralServiceAAF
+ExecStart=/home/ubuntu/aafs/bin/python /home/ubuntu/CentralServiceAAF/aafFirst.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
