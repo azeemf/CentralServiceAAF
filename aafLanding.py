@@ -17,7 +17,7 @@ def usageStats():
 def sidebar(authenticator):
     with st.sidebar:
         authenticator.logout()
-    with st.popover:
+    with st.popover("Show Usage"):
         usageStats()
 
 def topBar(authenticator):
