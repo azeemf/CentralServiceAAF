@@ -4,11 +4,21 @@ import yaml
 from yaml.loader import SafeLoader
 import os
 from datetime import date
+import time
 
+var = 0
+
+@st.fragment
+def usageStats():
+    var = var + 1
+    st.write(var)
+    time.sleep(1)
 
 def sidebar(authenticator):
     with st.sidebar:
         authenticator.logout()
+    with st.popover:
+        usageStats()
 
 def topBar(authenticator):
     tbcol1, tbcol2 = st.columns(2)
