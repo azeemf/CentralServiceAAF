@@ -1,0 +1,12 @@
+[Unit]
+Description=FastAPI API Service
+After=network.target
+
+[Service]
+User=ubuntu  # Replace with your user
+Group=www-data
+WorkingDirectory=/home/ubuntu/CentralServiceAAF/APIServer
+ExecStart=/usr/local/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+
+[Install]
+WantedBy=multi-user.target
