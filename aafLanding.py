@@ -11,6 +11,7 @@ def usageStats(var):
     var = var + 1
     st.write(var)
     time.sleep(1)
+    st.rerun()
 
 def sidebar(authenticator):
     with st.sidebar:
