@@ -6,18 +6,19 @@ import os
 from datetime import date
 import time
 
-@st.fragment
+var = 0
+
+@st.fragment(run_every="1s")
 def usageStats(var):
     var = var + 1
     st.write(var)
     time.sleep(1)
-    st.rerun()
 
 def sidebar(authenticator):
     with st.sidebar:
         authenticator.logout()
     with st.popover("Show Usage"):
-        usageStats(var = 0)
+        usageStats()
 
 def topBar(authenticator):
     tbcol1, tbcol2 = st.columns(2)
