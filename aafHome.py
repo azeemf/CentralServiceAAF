@@ -31,6 +31,7 @@ def main():
         st.warning('Please enter your username and password')
 
     st.link_button("Experiance", url="https://exp.aaf-services.uk", use_container_width=True)
+    st.link_button("Foundry", url="https://aaf.euw-3.palantirfoundry.co.uk/", use_container_width=True)
 
     icol1, icol2, icol3 = st.columns(3)
 
